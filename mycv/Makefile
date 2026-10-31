@@ -1,14 +1,6 @@
-#TC=xelatex
-TC=latex
-DST=~/repo/youngung.github.io/images/
+TC=xelatex
+DST=~/repo/youngung.github.io/assets/pdf/cv_latex.pdf
 
-
-# doc: cv.tex awesome-cv.cls fontawesome.sty fonts Makefile
-#	$(TC) cv.tex
-#	$(TC) cv_latex.tex
 cv: cv_latex.tex
 	$(TC) cv_latex.tex
-	cp cv_latex.pdf $(DST)/cv.pdf
-
-# copy: cv.pdf
-#	cp cv.pdf $(DST)
+	cp cv_latex.pdf $(DST)

@@ -1,5 +1,5 @@
 \documentclass[10pt, letterpaper]{article}
-
+\usepackage{kotex}
 % Packages:
 \usepackage[
     ignoreheadfoot, % set margins without considering header and footer
@@ -44,7 +44,11 @@
     \usepackage{lmodern}
 \fi
 
-\usepackage{charter}
+\ifPDFTeX
+    \usepackage{charter}
+\else
+    \setmainfont{XCharter}
+\fi
 
 % Some settings:
 \raggedright
@@ -54,7 +58,7 @@
 \setlength{\parindent}{0pt} % no indentation
 \setlength{\topskip}{0pt} % no top skip
 \setlength{\columnsep}{0.15cm} % set column seperation
-\pagenumbering{gobble} % no page numbering
+\pagenumbering{arabic} % no page numbering is visible with the empty page style
 
 \titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
 
@@ -348,7 +352,7 @@
         \end{samepage}
 
 
-        \section{Goverment-funded projects}
+        \section{Government-funded projects}
         \begin{twocolentry}{2023 - 2027}
             \textbf{Mid-career Researcher Program (PI), National Research Foundation of Korea}
         \end{twocolentry}
@@ -372,6 +376,11 @@
         \begin{twocolentry}{2017 - 2020}
             \textbf{General Research Program (PI), National Research Foundation of Korea}
         \end{twocolentry}
+
+    \section{Awards}
+        \begin{onecolentry}
+            \item Chungwoong Award (청웅상), The Korean Institute of Metals and Materials, 2026
+        \end{onecolentry}
 
     \section{Skills}
         \begin{onecolentry}
@@ -398,7 +407,7 @@
         \end{onecolentry}
         \vspace{0.4 cm}
 
-        \begin{twocolentry}{\href{https://github.com/Jeonbohye/VPSC8-dEVPSC}{github.com/Jeonbohye/VPSC8-dEVPSC}}\textbf{VPSC8 and EVPSC} (private repo)
+        \begin{twocolentry}{\href{https://github.com/Jeonbohye/VPSC8-dEVPSC}{\nolinkurl{github.com/Jeonbohye/VPSC8-dEVPSC}}}\textbf{VPSC8 and EVPSC} (private repo)
         \end{twocolentry}
         \begin{onecolentry}
             \begin{highlights}
@@ -409,14 +418,14 @@
         \end{onecolentry}
         \vspace{0.4 cm}
 
-        \begin{twocolentry}{\href{https://github.com/youngung/texture3}{github.com/youngung/texture3}}
+        \begin{twocolentry}{\href{https://github.com/youngung/texture3}{\nolinkurl{github.com/youngung/texture3}}}
             \textbf{In-house Python scripts for texture analysis}
         \end{twocolentry}
         \begin{onecolentry}
             \begin{highlights}
                 \item Can plot contoured pole figures and inverse pole figures from discrete orientations
                 \item Written entirely in Python with open-sourced libraries including matplotlib, NumPy and SciPy
-                \item Can generate RGB maps of EBSD (electron basck-scattered diffraction) scans
+                \item Can generate RGB maps of EBSD (electron back-scattered diffraction) scans
             \end{highlights}
         \end{onecolentry}
         \vspace{0.4 cm}
@@ -430,7 +439,7 @@
         \vspace{0.2 cm}
         \begin{twocolentry}{2019-present}
           \begin{highlights}
-          \item Editoiral board member of Korean Journal of Metals and Materials
+          \item Editorial board member of Korean Journal of Metals and Materials
           \end{highlights}
         \end{twocolentry}
         \vspace{0.2 cm}
@@ -447,7 +456,7 @@
 
         \item
           \begin{twocolentry}{submitted}
-            \href{}{Application of $\Delta$ EVPSC to interpret mechanical behavior of AZ31B sheet in warm temperature}
+            Application of $\Delta$ EVPSC to interpret mechanical behavior of AZ31B sheet in warm temperature
           \end{twocolentry}
           \begin{onecolentry}
             {Kyoungwon Hwang, Bohye Jeon, Jaeseong Lee, Hyuk-Jong Bong, Jinwoo Lee, \underline{\textit{Y. Jeong*}}}
@@ -458,7 +467,7 @@
 
         \item
           \begin{twocolentry}{submitted}
-            \href{}{Elasto-visco-plastic model for deformation of dual phase steels}
+            Elasto-visco-plastic model for deformation of dual phase steels
           \end{twocolentry}
           \begin{onecolentry}
             Anirban Patra*, {\underline{\textit{Y. Jeong*}}}, Carlos N. Tome
@@ -469,7 +478,7 @@
 
         \item
           \begin{twocolentry}{submitted}
-            \href{}{A cluster-based mean-field crystal plasticity modeling framework to simulate dynamic recrystallization}
+            A cluster-based mean-field crystal plasticity modeling framework to simulate dynamic recrystallization
           \end{twocolentry}
           \begin{onecolentry}
             {\underline{\textit{Y. Jeong*}}}, Carlos N. Tome, Andrea Rovinelli, Laurent Capolungo
@@ -479,7 +488,7 @@
 
         \item
           \begin{twocolentry}{submitted}
-            \href{}{Calibrating self-consistent crystal plasticity models beyond stress-strain fitting: mechanism-activity features to discover solution families}
+            Calibrating self-consistent crystal plasticity models beyond stress-strain fitting: mechanism-activity features to discover solution families
           \end{twocolentry}
           \begin{onecolentry}
             Jinyeong Yu, Jaeseong Lee, {\underline{\textit{Y. Jeong*}}}, T. Lee*
@@ -489,7 +498,7 @@
 
         \item
           \begin{twocolentry}{submitted}
-            \href{}{Reverse engineering material behavior using Bayesian inference and finite element analysis on ring-pull test}
+            Reverse engineering material behavior using Bayesian inference and finite element analysis on ring-pull test
           \end{twocolentry}
           \begin{onecolentry}
             B. Jeon, C. N. Tome, P. M. Beck, B. Eftinik, A. Talapatra, {\underline{\textit{Y. Jeong}*}}, L. Capolungo*
@@ -498,7 +507,7 @@
 
         \item
           \begin{twocolentry}{accepted}
-            \href{}{(1012) Twinning, Slip, and Texture in AZ31 Mg under Uniaxial Compression: A Comparative Study of Schmid Factor and Crystal Plasticity Modeling}
+            (1012) Twinning, Slip, and Texture in AZ31 Mg under Uniaxial Compression: A Comparative Study of Schmid Factor and Crystal Plasticity Modeling
           \end{twocolentry}
         \begin{onecolentry}
           {\it Metals and Materials International}
@@ -543,7 +552,7 @@
             {\it International Journal of Material Forming}, 19:17
         \end{onecolentry}
           \begin{onecolentry}
-            Lorenz Maier, Erik Walz, Michael Hofmann, Joana Rebelo Kornmeier, Rongfei Juan, Lian Junhe, {\underline{\textit{Youngung Jeong}}, Bohye Jeon, Martin Milch, Alper Guner, Emad Maawad, Wolfram Volk, Christoph Hartmann
+            Lorenz Maier, Erik Walz, Michael Hofmann, Joana Rebelo Kornmeier, Rongfei Juan, Lian Junhe, {\underline{\textit{Youngung Jeong}}}, Bohye Jeon, Martin Milch, Alper Guner, Emad Maawad, Wolfram Volk, Christoph Hartmann
           \end{onecolentry}
           \vspace{0.10 cm}
 
